@@ -14,6 +14,7 @@ class ItemViewController: UIViewController, UIScrollViewDelegate {
     var offers: [Offers] = []
     var frame = CGRect.zero
     var size: String?
+    
     var color: String?
     var amount = Int()
     
