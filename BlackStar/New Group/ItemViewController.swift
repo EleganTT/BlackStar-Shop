@@ -15,6 +15,7 @@ class ItemViewController: UIViewController, UIScrollViewDelegate {
     var frame = CGRect.zero
     var size: String?
     var color: String?
+    
     var amount = Int()
     
     @IBOutlet weak var colorsTableView: UITableView!
