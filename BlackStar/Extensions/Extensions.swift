@@ -90,3 +90,19 @@ extension UIBarButtonItem {
     }
 
 }
+
+extension UINavigationController {
+    func addButton(color: UIColor) -> UIBarButtonItem {
+        let rightBarButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        rightBarButton.tintColor = color
+        rightBarButton.setBackgroundImage(UIImage(systemName: "cart.fill", compatibleWith: .none), for: .normal)
+        rightBarButton.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
+        
+        return UIBarButtonItem(customView: rightBarButton)
+    }
+    
+    @objc func buttonAction(sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "BasketVC") as! BasketViewController
+        self.pushViewController(vc, animated: true)
+    }
+}

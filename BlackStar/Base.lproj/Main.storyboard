@@ -69,7 +69,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="3b2-w8-o5j" kind="show" identifier="goToItemsCollection" id="XgI-qF-4Zy"/>
-                        <segue destination="uMJ-fc-7hL" kind="show" identifier="goToBasket" id="h9C-G4-KCQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HC1-NV-Jwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -169,7 +168,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="u55-x3-9a1" kind="show" identifier="goToItem" id="VeD-Ng-sdf"/>
-                        <segue destination="uMJ-fc-7hL" kind="show" identifier="goToBasket" id="tli-QP-g8k"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8I-ae-Lvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -372,7 +370,7 @@
         <!--Корзина-->
         <scene sceneID="8dH-2J-kdl">
             <objects>
-                <viewController id="uMJ-fc-7hL" customClass="BasketViewController" customModule="BlackStar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BasketVC" id="uMJ-fc-7hL" customClass="BasketViewController" customModule="BlackStar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KYn-TA-5Oz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -567,9 +565,6 @@
             <point key="canvasLocation" x="406" y="111"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="WuQ-NP-fan"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="trash" width="24" height="24"/>

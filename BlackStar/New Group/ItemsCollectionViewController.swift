@@ -30,13 +30,8 @@ class ItemsCollectionViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         //MARK: Add badge on navigation right bar button
-        let rightBarButton = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-        rightBarButton.tintColor = .systemGray2
-        rightBarButton.setBackgroundImage(UIImage(systemName: "cart.fill", compatibleWith: .none), for: .normal)
-        rightBarButton.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
 
-        let rightBarButtonItem = UIBarButtonItem(customView: rightBarButton)
-        navigationItem.rightBarButtonItem = rightBarButtonItem
+        navigationItem.rightBarButtonItem = navigationController?.addButton(color: .systemGray2)
         
         navigationItem.rightBarButtonItem?.addBadge(number: Persistence().totalAmount())
     }
