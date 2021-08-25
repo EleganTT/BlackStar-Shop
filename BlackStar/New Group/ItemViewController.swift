@@ -54,6 +54,8 @@ class ItemViewController: UIViewController, UIScrollViewDelegate {
                 alertControllerItemAdded.addAction(alertActionOk)
                 present(alertControllerItemAdded, animated: true, completion: nil)
                 
+                navigationItem.rightBarButtonItem?.addBadge(number: Persistence().totalAmount())
+                
             } else {
                 let alertControllerChooseColorAndText = UIAlertController(title: "Выберите цвет и размер", message: "", preferredStyle: .alert)
                 let alertActionYes = UIAlertAction(title: "Ок", style: .default) { (alert) in
@@ -241,10 +243,6 @@ extension ItemViewController: UITableViewDataSource, UITableViewDelegate {
         } else if tableView == sizesTableView {
             self.size = offers[indexPath.row].size
         }
-    }
-    
-    @objc func buttonAction(sender: UIButton) {
-        performSegue(withIdentifier: "goToBasket", sender: nil)
     }
 }
 

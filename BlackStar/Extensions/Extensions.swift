@@ -57,26 +57,30 @@ extension UIBarButtonItem {
         badgeLayer?.removeFromSuperlayer()
         
         // Initialize Badge
-        let badge = CAShapeLayer()
-        let radius = CGFloat(7)
-        let location = CGPoint(x: 20, y: 4)
-        badge.drawCircleAtLocation(location: location, withRadius: radius, andColor: color, filled: filled)
-        view.layer.addSublayer(badge)
+        if number > 0 {
+            let badge = CAShapeLayer()
+            let radius = CGFloat(7)
+            let location = CGPoint(x: 20, y: 4)
+            badge.drawCircleAtLocation(location: location, withRadius: radius, andColor: color, filled: filled)
+            view.layer.addSublayer(badge)
 
-        // Initialiaze Badge's label
-        let label = CATextLayer()
-        label.font = UIFont.boldSystemFont(ofSize: 12)
-        label.string = "\(number)"
-        label.alignmentMode = CATextLayerAlignmentMode.center
-        label.fontSize = 11
-        label.frame = CGRect(origin: CGPoint(x: location.x - 4, y: location.y - 7), size: CGSize(width: 8, height: 16))
-        label.foregroundColor = filled ? UIColor.white.cgColor : color.cgColor
-        label.backgroundColor = UIColor.clear.cgColor
-        label.contentsScale = UIScreen.main.scale
-        badge.addSublayer(label)
+            // Initialiaze Badge's label
+            let label = CATextLayer()
+            label.font = UIFont.boldSystemFont(ofSize: 12)
+            label.string = "\(number)"
+            label.alignmentMode = CATextLayerAlignmentMode.center
+            label.fontSize = 11
+            label.frame = CGRect(origin: CGPoint(x: location.x - 4, y: location.y - 7), size: CGSize(width: 8, height: 16))
+            label.foregroundColor = filled ? UIColor.white.cgColor : color.cgColor
+            label.backgroundColor = UIColor.clear.cgColor
+            label.contentsScale = UIScreen.main.scale
+            badge.addSublayer(label)
 
-        // Save Badge as UIBarButtonItem property
-        objc_setAssociatedObject(self, &handle, badge, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            // Save Badge as UIBarButtonItem property
+            objc_setAssociatedObject(self, &handle, badge, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        
+
     }
 
     func updateBadge(number: Int) {

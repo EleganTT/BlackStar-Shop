@@ -34,6 +34,7 @@ class BasketTableViewCell: UITableViewCell {
         let alertActionYes = UIAlertAction(title: "Да", style: .default) { [self] (alert) in
             self.delegate?.deleteItem(index: sender.tag)
             basketViewController.getTotalAmount()
+            basketViewController.setButtonTitle()
         }
         
         let alertActionNo = UIAlertAction(title: "Нет", style: .default) { (alert) in

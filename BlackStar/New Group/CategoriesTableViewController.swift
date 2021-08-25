@@ -17,7 +17,6 @@ class CategoriesTableViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
         DataLoader().loadCategories { categories in
             self.categories = categories
             self.tableView.reloadData()
@@ -74,7 +73,6 @@ class CategoriesTableViewController: UITableViewController {
                 navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(systemName: "chevron.backward"), style: .done, target: self, action: #selector(addTapped))
                 navigationItem.leftBarButtonItem?.imageInsets = UIEdgeInsets(top: 0, left: -8, bottom: 0, right: 0)
             }
-            
             self.tableView.reloadData()
         } else {
             performSegue(withIdentifier: "goToItemsCollection", sender: nil)
@@ -85,29 +83,22 @@ class CategoriesTableViewController: UITableViewController {
         if !subcategories.isEmpty {
             if segue.identifier == "goToItemsCollection" {
                 let selectedSubcategory = subcategories[tableView.indexPathForSelectedRow!.row]
-                CategoriesTableViewController.subcategoryId = subcategories[tableView.indexPathForSelectedRow!.row].id
-                print(CategoriesTableViewController.subcategoryId)
+                CategoriesTableViewController.subcategoryId = selectedSubcategory.id
                 (segue.destination as! ItemsCollectionViewController).subcategory = selectedSubcategory
             }
         } else {
             if segue.identifier == "goToItemsCollection" {
                 let selectedCategory = categories[tableView.indexPathForSelectedRow!.row]
                 CategoriesTableViewController.subcategoryId = categories[tableView.indexPathForSelectedRow!.row].id
-                print(CategoriesTableViewController.subcategoryId)
                 (segue.destination as! ItemsCollectionViewController).category = selectedCategory
             }
         }
-
     }
     
     @objc func addTapped() {
         subcategories.removeAll()
         navigationItem.leftBarButtonItem = nil
         self.tableView.reloadData()
-    }
-    
-    @objc func buttonAction(sender: UIButton) {
-        performSegue(withIdentifier: "goToBasket", sender: nil)
     }
 }
 

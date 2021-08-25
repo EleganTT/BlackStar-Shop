@@ -98,14 +98,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O9H-jj-nk3">
-                                            <rect key="frame" x="15" y="41" width="150" height="150"/>
+                                            <rect key="frame" x="15" y="38" width="150" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" priority="999" constant="150" id="3E7-t8-bKH"/>
                                                 <constraint firstAttribute="height" constant="150" id="WZ9-ce-0iz"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IMt-Ug-xMh">
-                                            <rect key="frame" x="25" y="212" width="60" height="14"/>
+                                            <rect key="frame" x="25" y="209" width="60" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="tXH-di-4Fw"/>
                                             </constraints>
@@ -114,7 +114,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qF3-Sk-CHn">
-                                            <rect key="frame" x="105" y="207" width="50" height="23"/>
+                                            <rect key="frame" x="105" y="204" width="50" height="26"/>
                                             <color key="backgroundColor" systemColor="systemPinkColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="esy-V0-Oiy"/>
@@ -128,8 +128,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twZ-Qe-dYG">
-                                            <rect key="frame" x="25" y="15" width="130" height="11"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <rect key="frame" x="15" y="15" width="140" height="13"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -140,8 +140,8 @@
                                         <constraint firstAttribute="bottom" secondItem="IMt-Ug-xMh" secondAttribute="bottom" constant="14" id="JX5-vt-fCA"/>
                                         <constraint firstAttribute="trailing" secondItem="twZ-Qe-dYG" secondAttribute="trailing" constant="25" id="OVo-LY-rzl"/>
                                         <constraint firstItem="O9H-jj-nk3" firstAttribute="leading" secondItem="FaD-rT-kUz" secondAttribute="leading" constant="15" id="Qf2-sC-JKF"/>
-                                        <constraint firstItem="twZ-Qe-dYG" firstAttribute="leading" secondItem="FaD-rT-kUz" secondAttribute="leading" constant="25" id="exx-hI-jJO"/>
-                                        <constraint firstItem="O9H-jj-nk3" firstAttribute="top" secondItem="twZ-Qe-dYG" secondAttribute="bottom" constant="15" id="miv-uh-WiY"/>
+                                        <constraint firstItem="twZ-Qe-dYG" firstAttribute="leading" secondItem="FaD-rT-kUz" secondAttribute="leading" constant="15" id="exx-hI-jJO"/>
+                                        <constraint firstItem="O9H-jj-nk3" firstAttribute="top" secondItem="twZ-Qe-dYG" secondAttribute="bottom" constant="10" id="miv-uh-WiY"/>
                                         <constraint firstAttribute="trailing" secondItem="O9H-jj-nk3" secondAttribute="trailing" constant="15" id="qPG-ua-SM3"/>
                                         <constraint firstItem="qF3-Sk-CHn" firstAttribute="top" secondItem="O9H-jj-nk3" secondAttribute="bottom" constant="16" id="qiV-SP-hiJ"/>
                                         <constraint firstItem="IMt-Ug-xMh" firstAttribute="top" secondItem="O9H-jj-nk3" secondAttribute="bottom" constant="21" id="rix-4a-KpL"/>
@@ -384,14 +384,14 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="BasketTableViewCell" id="Yr4-58-hxM" customClass="BasketTableViewCell" customModule="BlackStar" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="81.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yr4-58-hxM" id="vHC-Js-1V0">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="81.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qMe-m4-OWN">
-                                                    <rect key="frame" x="19" y="6" width="67" height="69.5"/>
+                                                    <rect key="frame" x="19" y="6" width="67" height="69"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" priority="750" constant="67" id="9uB-ud-Lob"/>
                                                         <constraint firstAttribute="width" constant="67" id="L2Z-s8-OqZ"/>
@@ -428,7 +428,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8t-3I-smV">
-                                                    <rect key="frame" x="380" y="29" width="22" height="23.5"/>
+                                                    <rect key="frame" x="380" y="29" width="22" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="3aE-bb-SlS"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="b57-ZC-6X6"/>
@@ -440,7 +440,7 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEO-G7-FVO">
-                                                    <rect key="frame" x="298" y="30" width="42" height="21.5"/>
+                                                    <rect key="frame" x="298" y="30" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

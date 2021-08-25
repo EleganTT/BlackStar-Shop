@@ -15,7 +15,7 @@ class ItemsCollectionViewController: UICollectionViewController {
     var subcategory: Subcategory?
     var subcategories: [Subcategory] = []
     var category: Category?
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,6 @@ class ItemsCollectionViewController: UICollectionViewController {
             self.items = items
             self.collectionView.reloadData()
         }
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,9 +47,10 @@ class ItemsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemsCollectionViewCell", for: indexPath) as! ItemsCollectionViewCell
         let item = items[indexPath.row]
         cell.cellIndex = indexPath.row
+        cell.itemDescription.text = item.name
     
         DataLoader().loadImages(url: item.mainImage, view: cell.itemImage)
-
+        
         let doublePrice = Double(item.price)
         let intPrice = Int(doublePrice ?? 0)
         let numberFormatter = NumberFormatter()
@@ -72,10 +72,6 @@ class ItemsCollectionViewController: UICollectionViewController {
             let selectedItem = items[sender as! Int]
             (segue.destination as! ItemViewController).item = selectedItem
         }
-    }
-    
-    @objc func buttonAction(sender: UIButton) {
-        performSegue(withIdentifier: "goToBasket", sender: nil)
     }
 }
 

@@ -31,22 +31,26 @@ class BasketViewController: UIViewController {
         totalLabel.text = "\(totalPrice) руб."
     }
     
+    func setButtonTitle() {
+        if items.isEmpty {
+            getOrderButton.setTitle("На главную", for: .normal)
+            getOrderButton.titleLabel?.font = UIFont.systemFont(ofSize: 15.0, weight: .bold)
+        } else {
+            getOrderButton.setTitle("Оформить заказ", for: .normal)
+            getOrderButton.titleLabel?.font = UIFont.systemFont(ofSize: 15.0, weight: .bold)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableFooterView = UIView()
         getTotalAmount()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //MARK: Change top bar icon
-        if items.isEmpty {
-            getOrderButton.setTitle("На главную", for: .normal)
-            getOrderButton.titleLabel?.font = UIFont.systemFont(ofSize: 15.0, weight: .bold) }
-        else {
-            getOrderButton.setTitle("Оформить заказ", for: .normal)
-            getOrderButton.titleLabel?.font = UIFont.systemFont(ofSize: 15.0, weight: .bold)
-        }
+
+        setButtonTitle()
         
         self.navigationController?.navigationBar.backIndicatorImage = UIImage.init(systemName: "multiply")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage.init(systemName: "multiply")
